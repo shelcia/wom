@@ -44,7 +44,7 @@ const BuyProducts = () => {
           {products.map((product, index) => (
             <div className="col-md-4 mb-5" key={index}>
               <div className="card shadow-lg border-0 rounded-lg">
-                <div className="card-header pt-4">
+                <div className="card-header pt-4 border-0 bg-white">
                   <p className="text-danger mb-1">Cold Pressed</p>
                   <Link to={`/products/${product.link}`}>
                     <h4 className="card-title text-info">
