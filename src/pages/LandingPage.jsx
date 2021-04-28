@@ -1,5 +1,9 @@
 import React from "react";
+import Blog from "../components/Blogs";
 import Carousel from "../components/Carousel";
+import Footer from "../components/Footer";
+import Goals from "../components/Goals";
+import Products from "../components/Products";
 import Topbar from "../components/Topbar";
 
 const LandingPage = () => {
@@ -7,9 +11,10 @@ const LandingPage = () => {
     <React.Fragment>
       <Topbar />
       <Carousel />
-      {/* <div>
-        <h1> LandingPage </h1>
-      </div> */}
+      <Products />
+      <Goals />
+      <Blog />
+      <Footer />
     </React.Fragment>
   );
 };

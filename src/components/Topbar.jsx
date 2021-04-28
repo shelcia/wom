@@ -1,17 +1,15 @@
 import React from "react";
 import Logo from "../assets/logo.png";
 import Search from "../assets/icons/search.svg";
+import { Link, NavLink } from "react-router-dom";
 
 const Topbar = () => {
   return (
     <React.Fragment>
-      <nav className="navbar navbar-expand-md navbar-dark">
-        {/* <a className="navbar-brand" href="!#">
-          Navbar
-        </a> */}
-        <a className="navbar-brand" href="!#">
+      <nav className="navbar navbar-expand-md navbar-dark shadow-lg">
+        <Link className="navbar-brand" to="!#">
           <img src={Logo} alt="Logo" style={{ width: "50px" }} />
-        </a>
+        </Link>
 
         <button
           className="navbar-toggler"
@@ -26,29 +24,26 @@ const Topbar = () => {
           <div className="container">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="!#">
+                <NavLink className="nav-link" to="/">
                   Home
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="!#">
+                <NavLink className="nav-link" to="/products">
                   Products
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="!#">
+                <NavLink className="nav-link" to="/contact">
                   Contact Us
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="!#">
+                <NavLink className="nav-link" to="/about">
                   About Us
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item dropdown">
-                {/* <a className="nav-link" href="!#">
-                  Blog
-                </a> */}
                 <a
                   className="nav-link dropdown-toggle"
                   href="!#"
@@ -59,13 +54,13 @@ const Topbar = () => {
                 </a>
                 <div className="dropdown-menu">
                   <a className="dropdown-item" href="!#">
-                    Link 1
+                    Category 1
                   </a>
                   <a className="dropdown-item" href="!#">
-                    Link 2
+                    Category 2
                   </a>
                   <a className="dropdown-item" href="!#">
-                    Link 3
+                    Category 3
                   </a>
                 </div>
               </li>

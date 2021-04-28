@@ -6,7 +6,7 @@ import Oil3 from "../assets/carousel/christin-hume-0MoF-Fe0w0A-unsplash.jpg";
 const Carousel = () => {
   return (
     <React.Fragment>
-      <div id="demo" className="carousel slide" data-ride="carousel">
+      <header id="demo" className="carousel slide" data-ride="carousel">
         <ul className="carousel-indicators">
           <li data-target="#demo" data-slide-to="0" className="active"></li>
           <li data-target="#demo" data-slide-to="1"></li>
@@ -76,7 +76,7 @@ const Carousel = () => {
         <a className="carousel-control-next" href="#demo" data-slide="next">
           <span className="carousel-control-next-icon"></span>
         </a>
-      </div>
+      </header>
     </React.Fragment>
   );
 };
