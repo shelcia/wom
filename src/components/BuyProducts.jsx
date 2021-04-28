@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Product1 from "../assets/products/groundnut.png";
 import swal from "sweetalert";
+import { Link } from "react-router-dom";
 
 const BuyProducts = () => {
   const [products] = useState([
@@ -9,18 +10,21 @@ const BuyProducts = () => {
       image: Product1,
       rate: 120,
       litre: "500 ml",
+      link: "ground-nut",
     },
     {
       name: "Groundnut Oil",
       image: Product1,
       rate: 240,
       litre: "1000 ml",
+      link: "ground-nut",
     },
     {
       name: "Groundnut Oil",
       image: Product1,
       rate: 1200,
       litre: "5 Litres",
+      link: "ground-nut",
     },
   ]);
 
@@ -40,13 +44,20 @@ const BuyProducts = () => {
           {products.map((product, index) => (
             <div className="col-md-4 mb-5" key={index}>
               <div className="card shadow-lg border-0 rounded-lg">
+                <div className="card-header pt-4">
+                  <p className="text-danger mb-1">Cold Pressed</p>
+                  <Link to={`/products/${product.link}`}>
+                    <h4 className="card-title text-info">
+                      {product.name} - {product.litre}
+                    </h4>
+                  </Link>{" "}
+                </div>
                 <div className="card-body text-center">
                   <img
                     src={product.image}
                     alt={product.name}
                     style={{ height: "250px", objectFit: "contain" }}
                   />
-                  <h4 className="card-title text-info mt-3">{product.name}</h4>{" "}
                 </div>
                 <div className="card-footer py-3 bg-info text-center d-flex justify-content-center flex-column align-items-center">
                   <button

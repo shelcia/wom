@@ -92,4 +92,33 @@ body {
 .btn-orange:hover {
   background-color: #ff6200;
 }
+
+.btn-green {
+  background-color: #033e44 !important;
+}
+
+.btn-green:hover {
+  background-color: #0c726f !important;
+}
+
+.check-btn {
+  font-weight: 400;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+}
+
+.badge-pills {
+  list-style: none;
+  padding-left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.badge-pills li {
+  background-color: #0c726f79;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
