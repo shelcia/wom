@@ -3,4 +3,26 @@
   scroll-behavior: smooth;
   font-family: "Nunito", sans-serif;
 }
+
+.navbar-dark {
+  background-color: #033e44;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("./menu.svg");
+}
+
+.navbar-dark .navbar-toggler {
+  color: white;
+  border: none;
+}
+
+.input-group-prepend .input-group-text {
+  background-color: white;
+  border: none;
+}
+
+.form-inline .form-control {
+  border: none;
+}
 /*# sourceMappingURL=style.css.map */

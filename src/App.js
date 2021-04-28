@@ -1,12 +1,16 @@
 import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
 import "./styles/style.css";
 
 const App = () => {
   return (
     <React.Fragment>
-      <div>
-        <h1> App </h1>
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route component={LandingPage} to="/" />
+        </Switch>
+      </BrowserRouter>
     </React.Fragment>
   );
 };
