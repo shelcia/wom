@@ -45,6 +45,7 @@ const Blog = () => {
                           alt=""
                           style={{ height: "20px" }}
                           className="mr-2"
+                          loading="lazy"
                         />
                         <img src={Bookmark} alt="" style={{ height: "20px" }} />
                       </div>

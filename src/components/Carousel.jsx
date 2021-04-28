@@ -19,6 +19,7 @@ const Carousel = () => {
               src={Oil1}
               alt="Los Angeles"
               style={{ objectFit: "cover", height: "80vh", width: "100%" }}
+              loading="eager"
             />
             <div className="carousel-caption">
               <h3>Some Oil</h3>
@@ -37,6 +38,7 @@ const Carousel = () => {
               src={Oil2}
               alt="Chicago"
               style={{ objectFit: "cover", height: "80vh", width: "100%" }}
+              loading="eager"
             />
             <div className="carousel-caption">
               <h3>Some Oil</h3>
@@ -55,6 +57,7 @@ const Carousel = () => {
               src={Oil3}
               alt="New York"
               style={{ objectFit: "cover", height: "80vh", width: "100%" }}
+              loading="eager"
             />
             <div className="carousel-caption">
               <h3>Some Oil</h3>

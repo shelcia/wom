@@ -16,6 +16,10 @@ body {
   background-image: url("./menu.svg");
 }
 
+.navbar-dark .nav-link.active {
+  text-decoration: underline;
+}
+
 .navbar-dark .navbar-toggler {
   color: white;
   border: none;
@@ -67,5 +71,13 @@ body {
   padding-left: 0px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.dropdown-menu {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  border: none;
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 }
 /*# sourceMappingURL=style.css.map */

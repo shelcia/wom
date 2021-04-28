@@ -16,6 +16,9 @@ body {
   .navbar-toggler-icon {
     background-image: url("./menu.svg");
   }
+  .nav-link.active {
+    text-decoration: underline;
+  }
   .navbar-toggler {
     color: white;
     border: none;
@@ -66,4 +69,10 @@ body {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
+}
+
+.dropdown-menu {
+  transition: all 0.3s ease-in;
+  border: none;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 }
