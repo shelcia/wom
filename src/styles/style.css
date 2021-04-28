@@ -80,4 +80,16 @@ body {
   -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
           box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 }
+
+.bg-info {
+  background-color: #033e44 !important;
+}
+
+.btn-orange {
+  background-color: #ff8800;
+}
+
+.btn-orange:hover {
+  background-color: #ff6200;
+}
 /*# sourceMappingURL=style.css.map */

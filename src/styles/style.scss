@@ -76,3 +76,12 @@ body {
   border: none;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 }
+.bg-info {
+  background-color: $primaryBg !important;
+}
+.btn-orange {
+  background-color: rgb(255, 136, 0);
+  &:hover {
+    background-color: rgb(255, 98, 0);
+  }
+}

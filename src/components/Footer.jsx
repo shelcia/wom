@@ -34,7 +34,8 @@ const Footer = () => {
                 <h4 className="mb-4">Follow us on</h4>
                 <div>
                   <i className="fab fa-facebook-f mr-3"></i>
-                  <i className="fab fa-twitter"></i>
+                  <i className="fab fa-twitter mr-3"></i>
+                  <i className="fab fa-youtube" />
                 </div>
               </div>
             </div>

@@ -22,7 +22,7 @@ const Topbar = () => {
         <div className="collapse navbar-collapse" id="collapsibleNavbar">
           <ul className="navbar-nav nav-fill w-100">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/">
+              <NavLink className="nav-link" exact to="/">
                 Home
               </NavLink>
             </li>

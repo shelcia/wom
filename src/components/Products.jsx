@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Product1 from "../assets/products/groundnut.png";
-import swal from "sweetalert";
 
 const Products = () => {
   const [products] = useState([
@@ -17,13 +16,6 @@ const Products = () => {
       image: Product1,
     },
   ]);
-
-  const addToCart = (event) => {
-    event.preventDefault();
-    swal("Hurray! Product is added to Cart", {
-      icon: "success",
-    });
-  };
 
   return (
     <React.Fragment>
@@ -45,9 +37,9 @@ const Products = () => {
                   <hr />
                   <button
                     className="btn btn-warning"
-                    onClick={(e) => addToCart(e)}
+                    onClick={(e) => e.preventDefault()}
                   >
-                    Add to Cart
+                    Explore
                   </button>
                 </div>
               </div>
