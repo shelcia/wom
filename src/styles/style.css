@@ -95,10 +95,12 @@ body {
 
 .btn-green {
   background-color: #033e44 !important;
+  border-color: #033e44 !important;
 }
 
 .btn-green:hover {
   background-color: #0c726f !important;
+  border-color: #0c726f !important;
 }
 
 .check-btn {

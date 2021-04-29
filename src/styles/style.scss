@@ -88,8 +88,10 @@ body {
 
 .btn-green {
   background-color: $primaryBg !important;
+  border-color: $primaryBg !important;
   &:hover {
     background-color: $primaryColor !important;
+    border-color: $primaryColor !important;
   }
 }
 
