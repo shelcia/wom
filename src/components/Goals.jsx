@@ -9,7 +9,7 @@ const Goals = () => {
           Our Goal
         </h1>
         <div className="row my-4 pt-4">
-          <div className="col-lg-5">
+          <div className="col-lg-5 mb-2">
             <iframe
               title="video"
               src={`https://www.youtube.com/embed/zgak4T-eD4E?playlist=NsHS6F2bjII&loop=1`}
@@ -20,7 +20,7 @@ const Goals = () => {
               Your browser does not support the video tag.
             </video> */}
           </div>
-          <div className="col-lg-7">
+          <div className="col-lg-7 mb-2">
             <p className="lead">
               Welcome Oil Mill aims to deliver 100% authentic cold pressed oil
               to our customers at the lowest possible price in the market. our
