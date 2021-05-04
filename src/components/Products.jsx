@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import Product1 from "../assets/products/groundnut.png";
+import Product1 from "../assets/products/GDB_shadow.png";
+import Product2 from "../assets/products/SSB_shadow.png";
+import Product3 from "../assets/products/CCB_shadow.png";
 
 const Products = () => {
   const [products] = useState([
@@ -8,40 +10,42 @@ const Products = () => {
       image: Product1,
     },
     {
-      name: "Groundnut Oil",
-      image: Product1,
+      name: "Gingelly Oil",
+      image: Product2,
     },
     {
-      name: "Groundnut Oil",
-      image: Product1,
+      name: "Sesame Oil",
+      image: Product3,
     },
   ]);
 
   return (
     <React.Fragment>
       <section className="container pt-5">
-        <h1 className="display-4 font-weight-bolder text-info mb-4">
+        {/* <h1 className="display-4 font-weight-bolder text-info mb-4">
           Our Products
-        </h1>
+        </h1> */}
         <div className="row mt-4">
           {products.map((product, index) => (
-            <div className="col-md-4 mb-5" key={index}>
-              <div className="card shadow-lg border-0 rounded-lg">
-                <div className="card-body text-center">
+            <div className="col-sm-4 mb-5" key={index}>
+              <div className="card border-0 p-0 rounded-0">
+                <div className="card-body text-center px-2 py-0">
                   <img
                     src={product.image}
                     alt={product.name}
-                    style={{ height: "250px", objectFit: "contain" }}
+                    className="img-fluid"
                   />
-                  <h4 className="card-title text-info mt-3">{product.name}</h4>{" "}
-                  <hr />
-                  <button
-                    className="btn btn-warning"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    Explore
-                  </button>
                 </div>
+              </div>
+              <div className="text-center">
+                <h4 className="font-weight-bolder">{product.name}</h4>{" "}
+                <p className="text-muted">Starting with $35</p>
+                <button
+                  className="btn btn-warning"
+                  onClick={(e) => e.preventDefault()}
+                >
+                  Explore
+                </button>
               </div>
             </div>
           ))}

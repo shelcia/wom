@@ -24,7 +24,13 @@ const Blog = () => {
   return (
     <React.Fragment>
       <section className="container py-5">
-        <h1 className="display-4 font-weight-bolder text-info mb-4">Blog</h1>
+        <div className="text-center py-5">
+          <h1 className="display-3 font-weight-bold">
+            Come, peek into <br /> The
+            <span className="text-warning">WOM Journal</span>
+          </h1>
+        </div>
+
         <div className="row pt-4">
           {blogs.map((blog, index) => (
             <div className="col-lg-4 mb-4" key={index}>
