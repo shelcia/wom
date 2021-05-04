@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
 
 $primaryBg: #033e44;
-$primaryColor: #0c726f;
+$primaryColor: #fed113;
 
 * {
   scroll-behavior: smooth;
@@ -11,16 +11,20 @@ body {
   overflow-x: hidden;
 }
 
-.navbar-dark {
-  background-color: $primaryBg;
+.navbar-light {
+  box-shadow: 50px 50px 50px rgba(0, 0, 0, 0.16);
   .navbar-toggler-icon {
     background-image: url("./menu.svg");
   }
   .nav-link.active {
-    text-decoration: underline;
+    color: $primaryColor !important;
+  }
+  .nav-link {
+    color: black !important;
+    font-weight: 600;
   }
   .navbar-toggler {
-    color: white;
+    color: black;
     border: none;
   }
 }
@@ -111,4 +115,36 @@ body {
     margin-right: 0.5rem;
     cursor: pointer;
   }
+}
+
+.carousel-indicators li {
+  height: 10px;
+  width: 10px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px #0000001e;
+}
+
+.hide-when-small {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .hide-when-small {
+    display: block;
+  }
+}
+
+.hide-when-big {
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+  .hide-when-big {
+    display: none;
+  }
+}
+
+.w-15 {
+  width: 15%;
 }

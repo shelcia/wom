@@ -1,9 +1,11 @@
-import React from "react";
-import Oil1 from "../assets/carousel/anshu-a-7n5_0j7b7Hg-unsplash.jpg";
-import Oil2 from "../assets/carousel/chelsea-shapouri-r40EYKVyutI-unsplash.jpg";
-import Oil3 from "../assets/carousel/christin-hume-0MoF-Fe0w0A-unsplash.jpg";
+import React, { useState } from "react";
+import Oil1 from "../assets/carousel/groundnut.png";
+import Oil2 from "../assets/carousel/gingelly.png";
+import Oil3 from "../assets/carousel/sesame.png";
 
 const Carousel = () => {
+  const [image] = useState([{ image: Oil1 }, { image: Oil2 }, { image: Oil3 }]);
+
   return (
     <React.Fragment>
       <header id="demo" className="carousel slide" data-ride="carousel">
@@ -14,63 +16,19 @@ const Carousel = () => {
         </ul>
 
         <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img
-              src={Oil1}
-              alt="Los Angeles"
-              style={{ objectFit: "cover", height: "80vh", width: "100%" }}
-              loading="eager"
-            />
-            <div className="carousel-caption">
-              <h3>Some Oil</h3>
-              Photo by{" "}
-              <a href="https://unsplash.com/@anshu18?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-                Anshu A{" "}
-              </a>
-              on{" "}
-              <a href="https://unsplash.com/s/photos/oil?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-                Unsplash
-              </a>
+          {image.map((img, index) => (
+            <div
+              className={index === 0 ? "carousel-item active" : "carousel-item"}
+              key={index}
+            >
+              <img
+                src={img.image}
+                alt=""
+                style={{ objectFit: "cover", width: "100%" }}
+                loading="eager"
+              />
             </div>
-          </div>
-          <div className="carousel-item">
-            <img
-              src={Oil2}
-              alt="Chicago"
-              style={{ objectFit: "cover", height: "80vh", width: "100%" }}
-              loading="eager"
-            />
-            <div className="carousel-caption">
-              <h3>Some Oil</h3>
-              Photo by{" "}
-              <a href="https://unsplash.com/@primal_harmony?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-                Chelsea shapouri
-              </a>{" "}
-              on{" "}
-              <a href="https://unsplash.com/s/photos/sesme-oil?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-                Unsplash
-              </a>
-            </div>
-          </div>
-          <div className="carousel-item">
-            <img
-              src={Oil3}
-              alt="New York"
-              style={{ objectFit: "cover", height: "80vh", width: "100%" }}
-              loading="eager"
-            />
-            <div className="carousel-caption">
-              <h3>Some Oil</h3>
-              Photo by{" "}
-              <a href="https://unsplash.com/@christinhumephoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-                Christin Hume{" "}
-              </a>
-              on{" "}
-              <a href="https://unsplash.com/s/photos/essential-oil?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-                Unsplash
-              </a>
-            </div>
-          </div>
+          ))}
         </div>
 
         <a className="carousel-control-prev" href="#demo" data-slide="prev">
