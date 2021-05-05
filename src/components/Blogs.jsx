@@ -1,70 +1,48 @@
-import React, { useState } from "react";
-import Blog1 from "../assets/blogs/nandhu-kumar-5NGTf4oD8RA-unsplash.jpg";
-import Heart from "../assets/icons/heart-white.svg";
-import Bookmark from "../assets/icons/bookmark-white.svg";
+import React from "react";
+import Blog1 from "../assets/blogs/Blog1.png";
+// import Heart from "../assets/icons/heart-white.svg";
+// import Bookmark from "../assets/icons/bookmark-white.svg";
 
 const Blog = () => {
-  const [blogs] = useState([
-    {
-      title: "Why Cold Pressed Oil is Healthy ?",
-      image: Blog1,
-      date: "12 August 2020",
-    },
-    {
-      title: "Why Cold Pressed Oil is Healthy ?",
-      image: Blog1,
-      date: "12 August 2020",
-    },
-    {
-      title: "Why Cold Pressed Oil is Healthy ?",
-      image: Blog1,
-      date: "12 August 2020",
-    },
-  ]);
   return (
     <React.Fragment>
       <section className="container py-5">
         <div className="text-center py-5">
-          <h1 className="display-3 font-weight-bold">
+          <h1 className="display-3 font-weight-bold font-make-smaller">
             Come, peek into <br /> The
             <span className="text-warning">WOM Journal</span>
           </h1>
         </div>
+        <div className="row py-4">
+          <div className="col-lg-4 mb-4 p-0">
+            <img
+              src={Blog1}
+              alt=""
+              style={{ height: "100%", width: "100%", objectFit: "cover" }}
+            />
+          </div>
+          <div className="col-lg-8 mb-4 d-flex flex-column justify-content-between">
+            <h2 className="font-weight-bold">Why Gingely Oil ?</h2>
+            <h5 className="text-muted italic">Why Gingely Oil ?</h5>
 
-        <div className="row pt-4">
-          {blogs.map((blog, index) => (
-            <div className="col-lg-4 mb-4" key={index}>
-              <div className="card blog-card shadow-lg">
-                <img
-                  className="card-img-top"
-                  src={blog.image}
-                  alt=""
-                  style={{ height: "400px", objectFit: "cover" }}
-                />
-                <div className="card-img-overlay text-white">
-                  <div className="d-flex justify-content-between flex-column h-100">
-                    <div className="d-flex w-100 justify-content-between">
-                      <p>{blog.date}</p>
-                      <div>
-                        <img
-                          src={Heart}
-                          alt=""
-                          style={{ height: "20px" }}
-                          className="mr-2"
-                          loading="eager"
-                        />
-                        <img src={Bookmark} alt="" style={{ height: "20px" }} />
-                      </div>
-                    </div>
-                    <div className="d-flex w-100 flex-column mb-0">
-                      <p>Author</p>
-                      <h4>{blog.title}</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo. Lorem
+              ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+              sed diam voluptua. At vero eos et accusam et justo. Lorem ipsum
+              dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+              sed diam voluptua. At vero eos et accusam et justo.
+            </p>
+            <div className="text-right">
+              <button className="btn btn-warning">Read More</button>
             </div>
-          ))}
+          </div>
+        </div>
+        <div className="text-center">
+          <button className="btn btn-warning">More Blogs</button>
         </div>
       </section>
     </React.Fragment>

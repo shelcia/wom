@@ -71,45 +71,29 @@ body {
 }
 
 .footer-bg {
-  background-color: #033e44;
+  -webkit-box-shadow: -10px -10px 50px rgba(0, 0, 0, 0.05);
+          box-shadow: -10px -10px 50px rgba(0, 0, 0, 0.05);
 }
 
 .footer-bg .list-group-item {
-  background-color: #033e44;
   border: none;
   padding-left: 0px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
-.dropdown-menu {
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+.footer-bg input {
   border: none;
-  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
-          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  border-bottom: 2px solid black;
+  padding-left: 0px;
+  border-radius: 0%;
 }
 
-.bg-info {
-  background-color: #033e44 !important;
-}
-
-.btn-orange {
-  background-color: #ff8800;
-}
-
-.btn-orange:hover {
-  background-color: #ff6200;
-}
-
-.btn-green {
-  background-color: #033e44 !important;
-  border-color: #033e44 !important;
-}
-
-.btn-green:hover {
-  background-color: #fed113 !important;
-  border-color: #fed113 !important;
+.footer-bg input:focus {
+  border: none;
+  border-bottom: 2px solid black;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .check-btn {
@@ -162,10 +146,6 @@ body {
   }
 }
 
-.w-15 {
-  width: 15%;
-}
-
 .product-cards {
   background: #ededed;
   background: radial-gradient(circle, #ededed 50%, #fafafa 100%);
@@ -173,5 +153,19 @@ body {
 
 .bg-lighter {
   background-color: #ffffce;
+}
+
+.text-muted {
+  color: #b5b5b5 !important;
+}
+
+@media (max-width: 767px) {
+  .font-make-smaller {
+    font-size: 2.5rem;
+  }
+}
+
+.italic {
+  font-style: italic;
 }
 /*# sourceMappingURL=style.css.map */

@@ -3,6 +3,7 @@ import Logo from "../assets/logo.png";
 import Search from "../assets/icons/search-icon.svg";
 import Cart from "../assets/icons/shopping-cart.svg";
 import User from "../assets/icons/user.svg";
+import Close from "../assets/icons/x.svg";
 import { Link, NavLink } from "react-router-dom";
 
 const Topbar = () => {
@@ -49,12 +50,17 @@ const Topbar = () => {
             </li>
             {/* ICONS */}
             <li className="nav-item">
-              <NavLink className="nav-link" to="/contact">
+              <a
+                className="nav-link"
+                href="/"
+                data-toggle="modal"
+                data-target="#myModal"
+              >
                 <span className="hide-when-small">Search</span>
                 <span className="hide-when-big">
                   <img src={Search} alt="" style={{ width: "20px" }} />
                 </span>
-              </NavLink>
+              </a>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/contact">
@@ -70,13 +76,60 @@ const Topbar = () => {
                 <span className="hide-when-big">
                   <img src={Cart} alt="" style={{ width: "20px" }} />
                 </span>
-
-                <span className="badge badge-warning">0</span>
+                <sup>
+                  <span
+                    className="badge badge-warning"
+                    style={{ fontSize: "1rem" }}
+                  >
+                    0
+                  </span>
+                </sup>
               </NavLink>
             </li>
           </ul>
         </div>
       </nav>
+      <Modal />
+    </React.Fragment>
+  );
+};
+
+const Modal = () => {
+  return (
+    <React.Fragment>
+      <div className="modal fade" id="myModal">
+        <div className="modal-dialog modal-lg modal-dialog-scrollable">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h4 className="modal-title">Search Any Product</h4>
+              <button type="button" className="close" data-dismiss="modal">
+                {/* &times; */}
+                <img src={Close} alt="" />
+              </button>
+            </div>
+
+            <div className="modal-body">
+              <label for="oil">Type Atleast three letters:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="oil"
+                placeholder="Search"
+              />
+            </div>
+
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-danger"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </React.Fragment>
   );
 };
