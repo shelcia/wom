@@ -109,10 +109,10 @@ const Modal = () => {
             </div>
 
             <div className="modal-body">
-              <label for="oil">Type Atleast three letters:</label>
+              <label htmlFor="oil">Type Atleast three letters:</label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="oil"
                 placeholder="Search"
               />

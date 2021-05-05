@@ -1,32 +1,11 @@
-import React, { useState } from "react";
-import Product1 from "../../assets/products/GDB_1.png";
+import React, { useContext } from "react";
 import swal from "sweetalert";
 import { Link } from "react-router-dom";
+import { ProductContext } from "../../context/ProductContext";
+import Cart from "../../assets/icons/shopping-cart.svg";
 
 const BuyProducts = () => {
-  const [products] = useState([
-    {
-      name: "Groundnut Oil",
-      image: Product1,
-      rate: 120,
-      litre: "500 ml",
-      link: "ground-nut",
-    },
-    {
-      name: "Groundnut Oil",
-      image: Product1,
-      rate: 240,
-      litre: "1000 ml",
-      link: "ground-nut",
-    },
-    {
-      name: "Groundnut Oil",
-      image: Product1,
-      rate: 1200,
-      litre: "5 Litres",
-      link: "ground-nut",
-    },
-  ]);
+  const [products] = useContext(ProductContext);
 
   const addToCart = (event) => {
     event.preventDefault();
@@ -37,54 +16,80 @@ const BuyProducts = () => {
   return (
     <React.Fragment>
       <section className="container py-5">
-        <h1 className="display-4 font-weight-bolder text-info mb-4">
-          Cold Pressed Oils
-        </h1>
-        <div className="row mt-4 py-4">
-          {products.map((product, index) => (
-            <div className="col-md-4 mb-5" key={index}>
-              <div className="card shadow-lg border-0 rounded-lg">
-                <div className="card-header pt-4 border-0 bg-white">
-                  <p className="text-danger mb-1">Cold Pressed</p>
-                  <Link to={`/products/${product.link}`}>
-                    <h4 className="card-title text-info">
-                      {product.name} - {product.litre}
-                    </h4>
-                  </Link>{" "}
-                </div>
-                <div className="card-body text-center">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    style={{ height: "250px", objectFit: "contain" }}
-                  />
-                </div>
-                <div className="card-footer py-3 bg-info text-center d-flex justify-content-center flex-column align-items-center">
-                  <button
-                    className="btn btn-danger"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <small>Rs </small>{" "}
-                    <h3 className="d-inline">{product.rate}</h3>
-                  </button>
-                  <div className="d-flex justify-content-between mt-4 w-100 px-4">
-                    <button
-                      className="btn btn-warning"
-                      onClick={(e) => addToCart(e)}
-                    >
-                      Add to Cart
-                    </button>
-                    <button
-                      className="btn btn-orange"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      Buy Now
-                    </button>
-                  </div>
-                </div>
+        <div className="row">
+          <div className="col-sm-3">
+            <h4 className="mb-4">Filters</h4>
+            <div id="Categories">
+              <div className="checkbox checkbox-warning">
+                <input id="Groundnut Oil" type="checkbox" className="styled" />
+                <label htmlFor="Groundnut Oil">Groundnut Oil</label>
+              </div>
+              <div className="checkbox checkbox-warning">
+                <input id="Sesame Oil" type="checkbox" className="styled" />
+                <label htmlFor="Sesame Oil">Sesame Oil</label>
+              </div>
+              <div className="checkbox checkbox-warning">
+                <input id="Gingelly Oil" type="checkbox" className="styled" />
+                <label htmlFor="Gingelly Oil">Gingelly Oil</label>
               </div>
             </div>
-          ))}
+            <div id="Quantity" className="mt-4">
+              <div className="checkbox checkbox-warning">
+                <input id="500 ml" type="checkbox" className="styled" />
+                <label htmlFor="500 ml">500 ml</label>
+              </div>
+              <div className="checkbox checkbox-warning">
+                <input id="1 Litre" type="checkbox" className="styled" />
+                <label htmlFor="1 Litre">1 Litre</label>
+              </div>
+              <div className="checkbox checkbox-warning">
+                <input id="5 Litre" type="checkbox" className="styled" />
+                <label htmlFor="5 Litre">5 Litres</label>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm-9">
+            <div className="row">
+              {products.map((product, index) => (
+                <div className="col-lg-4 mb-5" key={index}>
+                  <Link
+                    to={`/products/${product.product_id}`}
+                    className="text-dark text-decoration-none"
+                  >
+                    <div className="card border-0">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        style={{ width: "100%", objectFit: "contain" }}
+                      />
+                      <div className="d-flex  justify-content-between align-items-end">
+                        <div>
+                          <h3 className="text-warning d-inline">
+                            ₹{product.rate}
+                          </h3>{" "}
+                          <span
+                            className="text-muted"
+                            style={{ textDecoration: "line-through" }}
+                          >
+                            ₹{product.old_rate}
+                          </span>
+                          <h4 className="mb-0">{product.name}</h4>
+                        </div>
+                        <div>
+                          <button
+                            className="btn btn-warning px-3 py-2"
+                            onClick={(e) => addToCart(e)}
+                          >
+                            <img src={Cart} alt="" height="20px" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </React.Fragment>
