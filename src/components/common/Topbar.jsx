@@ -1,9 +1,9 @@
 import React from "react";
-import Logo from "../assets/logo.png";
-import Search from "../assets/icons/search-icon.svg";
-import Cart from "../assets/icons/shopping-cart.svg";
-import User from "../assets/icons/user.svg";
-import Close from "../assets/icons/x.svg";
+import Logo from "../../assets/logo.png";
+import Search from "../../assets/icons/search-icon.svg";
+import Cart from "../../assets/icons/shopping-cart.svg";
+import User from "../../assets/icons/user.svg";
+import Close from "../../assets/icons/x.svg";
 import { Link, NavLink } from "react-router-dom";
 
 const Topbar = () => {

@@ -1,5 +1,6 @@
 import React from "react";
-import Logo from "../assets/logo-min.png";
+// import Logo from "../assets/logo-min.png";
+import BounceLoader from "react-spinners/BounceLoader";
 
 const Loading = () => {
   return (
@@ -8,8 +9,7 @@ const Loading = () => {
         className="d-flex justify-content-center align-items-center flex-column"
         style={{ width: "100%", height: "100vh" }}
       >
-        <img src={Logo} alt="" style={{ height: "60vh" }} />
-        <h1> Loading ...</h1>
+        <BounceLoader color={"#FED113"} size={180} />
       </div>
     </React.Fragment>
   );

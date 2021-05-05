@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Product1 from "../assets/products/groundnut.png";
+import Product1 from "../../assets/products/GDB_1.png";
 import swal from "sweetalert";
 import { Link } from "react-router-dom";
 

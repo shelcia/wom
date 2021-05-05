@@ -1,12 +1,13 @@
 import React from "react";
-import Blog from "../components/Blogs";
-import Carousel from "../components/Carousel";
-import Footer from "../components/Footer";
-import Ingredients from "../components/Ingredients";
-// import Goals from "../components/Goals";
-import Products from "../components/Products";
-import Topbar from "../components/Topbar";
 import ArrowUp from "../assets/icons/arrow-up.svg";
+
+import Blog from "../components/landingPage/Blogs";
+import Carousel from "../components/landingPage/Carousel";
+import Ingredients from "../components/landingPage/Ingredients";
+// import Goals from "../components/Goals";
+import Products from "../components/landingPage/Products";
+import Topbar from "../components/common/Topbar";
+import Footer from "../components/common/Footer";
 
 const LandingPage = () => {
   return (

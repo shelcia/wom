@@ -1,7 +1,7 @@
 import React from "react";
-import BuyProducts from "../components/BuyProducts";
-import Footer from "../components/Footer";
-import Topbar from "../components/Topbar";
+import BuyProducts from "../components/products/BuyProducts";
+import Footer from "../components/common/Footer";
+import Topbar from "../components/common/Topbar";
 
 const ProductsPage = () => {
   return (

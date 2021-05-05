@@ -1,7 +1,5 @@
 import React from "react";
-import Blog1 from "../assets/blogs/Blog1.png";
-// import Heart from "../assets/icons/heart-white.svg";
-// import Bookmark from "../assets/icons/bookmark-white.svg";
+import Blog1 from "../../assets/blogs/Blog1.png";
 
 const Blog = () => {
   return (

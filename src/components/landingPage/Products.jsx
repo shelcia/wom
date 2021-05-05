@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Product1 from "../assets/products/GDB_shadow.png";
-import Product2 from "../assets/products/SSB_shadow.png";
-import Product3 from "../assets/products/CCB_shadow.png";
+import Product1 from "../../assets/products/GDB_shadow.png";
+import Product2 from "../../assets/products/SSB_shadow.png";
+import Product3 from "../../assets/products/CCB_shadow.png";
 
 const Products = () => {
   const [products] = useState([

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Footer from "../components/Footer";
-import Topbar from "../components/Topbar";
+import Footer from "../components/common/Footer";
+import Topbar from "../components/common/Topbar";
 import Oil1 from "../assets/products/groundnut.png";
 
 const ProductInfoPage = () => {

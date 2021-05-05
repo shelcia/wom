@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Chemical from "../assets/icons/chemical.png";
-import Heart from "../assets/icons/heart.png";
-import Acorn from "../assets/icons/acorn.png";
+import Chemical from "../../assets/icons/chemical.png";
+import Heart from "../../assets/icons/heart.png";
+import Acorn from "../../assets/icons/acorn.png";
 
 const Ingredients = () => {
   const [content] = useState([
