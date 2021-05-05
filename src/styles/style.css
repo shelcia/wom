@@ -251,4 +251,19 @@ body {
 .italic {
   font-style: italic;
 }
+
+.product-info .nav-pills .nav-link.active,
+.product-info .nav-pills .show > .nav-link {
+  background-color: transparent !important;
+  color: black;
+  font-size: 1.3rem;
+  text-align: left;
+  text-decoration: underline;
+}
+
+.product-info .nav-pills .nav-link {
+  color: black;
+  font-size: 1.3rem;
+  text-align: left;
+}
 /*# sourceMappingURL=style.css.map */

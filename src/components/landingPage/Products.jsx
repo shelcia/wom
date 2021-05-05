@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Product1 from "../../assets/products/GDB_shadow.png";
-import Product2 from "../../assets/products/SSB_shadow.png";
-import Product3 from "../../assets/products/CCB_shadow.png";
+import Product1 from "../../assets/products/shadow_pics/GDB_shadow.png";
+import Product2 from "../../assets/products/shadow_pics/SSB_shadow.png";
+import Product3 from "../../assets/products/shadow_pics/CCB_shadow.png";
 
 const Products = () => {
   const [products] = useState([
@@ -37,7 +37,7 @@ const Products = () => {
                   />
                 </div>
               </div>
-              <div className="text-center">
+              <div className="text-center mt-3">
                 <h4 className="font-weight-bolder">{product.name}</h4>{" "}
                 <p className="text-muted">Starting with $35</p>
                 <button

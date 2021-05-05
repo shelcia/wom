@@ -1,10 +1,36 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Footer from "../components/common/Footer";
 import Topbar from "../components/common/Topbar";
-import Oil1 from "../assets/products/groundnut.png";
+import { ProductContext } from "../context/ProductContext";
+import ListIcon from "../assets/icons/favorite.svg";
+import Minus from "../assets/icons/minus.svg";
+import Plus from "../assets/icons/plus.svg";
 
-const ProductInfoPage = () => {
+const ProductInfoPage = ({ match }) => {
   const [number, setNumber] = useState(1);
+
+  const [products] = useContext(ProductContext);
+
+  const [product, setProduct] = useState({
+    name: "",
+    image: "",
+    info_image: "",
+    rate: "",
+    old_rate: "",
+    offer: "",
+    quanity: "",
+    desc: "",
+    benefits: [],
+    storage: "",
+  });
+
+  useEffect(() => {
+    const res = products.filter(
+      (product) => product.product_id === match.params.id
+    );
+    setProduct(res[0]);
+    console.log(res);
+  }, [match.params.id, products]);
 
   const alterNumber = (e, arg) => {
     e.preventDefault();
@@ -18,135 +44,100 @@ const ProductInfoPage = () => {
   return (
     <React.Fragment>
       <Topbar />
-      <section className="container pt-5">
-        <div className="row py-4">
-          <div className="col-lg-4 mb-3 text-center">
-            <img
-              src={Oil1}
-              alt=""
-              style={{ objectFit: "contain", height: "400px" }}
-            />
-          </div>
-          <div className="col-lg-4 mb-3">
-            <p className="text-info lead mb-0">Cold Pressed</p>
-            <h1 className="font-weight-bolder text-info mb-4 mt-0">
-              Groundnut Oil
-            </h1>
-            <ul className="badge-pills">
-              <li>500ml</li>
-              <li>1 Litre</li>
-              <li>5 Litres</li>
-            </ul>
-
-            <div className="d-flex justify-content-between">
+      <section>
+        <div className="container-fluid">
+          <div className="row">
+            <div
+              className="col-md-6 px-0 mb-3"
+              style={{ overflowY: "scroll", height: "80vh" }}
+            >
+              <img src={product.info_image} alt="" width="100%" />
+            </div>
+            <div className="col-md-6 pt-4 pl-3 d-flex justify-content-between flex-column mb-3">
+              <h1 className="font-weight-bold mt-4">{product.name}</h1>
               <div>
-                <i className="far fa-star text-warning fa-lg" />
-                <i className="far fa-star text-warning fa-lg" />
-                <i className="far fa-star text-warning fa-lg" />
-                <i className="far fa-star text-warning fa-lg" />
-                <i className="far fa-star text-warning fa-lg" />
+                <h1 className="d-inline display-4 font-weight-bold text-warning">
+                  ₹{product.rate}
+                </h1>{" "}
+                <span
+                  className="text-muted"
+                  style={{ textDecoration: "line-through" }}
+                >
+                  ₹{product.old_rate}
+                </span>
               </div>
-              <p className="text-info">write review</p>
-            </div>
-
-            <div className="d-flex justify-content-between align-items-center">
-              <h1 className="display-3 text-danger font-weight-bolder">
-                ₹240.00
-              </h1>
+              <p>{product.desc}</p>
               <p
-                className="text-muted lead"
-                style={{ textDecoration: "line-through" }}
+                className="text-muted italic"
+                style={{ textDecoration: "underline" }}
               >
-                ₹280
+                Check if we could Deliver at your location
               </p>
-            </div>
-
-            <div>
-              <div className="input-group mb-3">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Enter Delivery Pincode."
-                />
-                <div className="input-group-append">
+              <div className="d-flex justify-content-around align-items-center">
+                <div className="form-group">
+                  <select className="form-control" id="sel1">
+                    <option>500ml</option>
+                    <option>1 Litre</option>
+                    <option>5 Litres</option>
+                  </select>
+                </div>
+                <div className="d-flex align-items-center">
                   <button
-                    className="btn btn-success btn-green check-btn"
                     type="button"
+                    className="btn btn-warning"
+                    onClick={(e) => alterNumber(e, -1)}
                   >
-                    Check
+                    <img src={Minus} alt="" height="25px" />
+                  </button>
+                  <h3 className="mb-0 mx-3">{number}</h3>
+                  <button
+                    type="button"
+                    className="btn btn-warning"
+                    onClick={(e) => alterNumber(e, 1)}
+                  >
+                    <img src={Plus} alt="" height="25px" />
                   </button>
                 </div>
               </div>
+              <div>
+                <button className="btn btn-warning mr-4 mb-1">
+                  Add to Wishlist
+                </button>
+                <button className="btn btn-warning mb-1">Add to Cart</button>
+              </div>
             </div>
-            <div className="d-flex justify-content-between mb-4">
-              <h3 className="mb-0">QTY</h3>
-              <button
-                type="button"
-                className="btn btn-light"
-                onClick={(e) => alterNumber(e, -1)}
-              >
-                -
-              </button>
-              <h3 className="mb-0">{number}</h3>
-              <button
-                type="button"
-                className="btn btn-light"
-                onClick={(e) => alterNumber(e, 1)}
-              >
-                +
-              </button>
-            </div>
-
-            <button
-              className="btn btn-success btn-green w-100 mb-2"
-              type="button"
-            >
-              Calculate Shipping Cost
-            </button>
-
-            <button className="btn btn-danger text-uppercase w-100">
-              ADD TO CART
-            </button>
           </div>
-          <div className="col-lg-4 mb-3 d-flex flex-column justify-content-between">
-            <div>
-              <p className="text-info lead">Quick Preview</p>
-              <p>
-                WOM's cold pressed groundnut oil is manufactured using
-                traditional wooden chekku and packed with atmost care.
-              </p>
-            </div>
-            <div>
-              <p className="text-info lead">Health Benefits</p>
-              <ul className="list-unstyled">
-                <li className="pb-2">
-                  <i className="fas fa-heart text-danger mr-2" />
-                  Controls Cholesterol Levels.
-                </li>
-                <li className="pb-2">
-                  <i className="fas fa-heart text-danger mr-2" />
-                  Boosts Heart Health.
-                </li>
-                <li className="pb-2">
-                  <i className="fas fa-heart text-danger mr-2" />
-                  Lowers Blood Pressure.
-                </li>
-                <li className="pb-2">
-                  <i className="fas fa-heart text-danger mr-2" />
-                  Prevents Cognitive Disorders.
-                </li>
-                <li className="pb-2">
-                  <i className="fas fa-heart text-danger mr-2" />
-                  Boosts Immune System.
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-info lead">Storage</p>
-              <p className="mb-0">
-                Transfer the oil from PET bottle to a non-plastic container to
-                have more shelf life.
-              </p>
+        </div>
+        <div className="bg-lighter py-5 product-info">
+          <div className="container">
+            <ul className="nav nav-pills nav-justified mb-5">
+              <li className="nav-item">
+                <a
+                  className="nav-link active"
+                  data-toggle="pill"
+                  href="#health"
+                >
+                  Health Benefits
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" data-toggle="pill" href="#menu1">
+                  Storage
+                </a>
+              </li>
+            </ul>
+            <div className="tab-content">
+              <div className="tab-pane container active fade" id="health">
+                {product.benefits.map((product, index) => (
+                  <p key={index}>
+                    <img src={ListIcon} alt="" height="25px" />
+                    <span className="ml-2">{product}</span>
+                  </p>
+                ))}
+              </div>
+              <div className="tab-pane container fade" id="menu1">
+                {product.storage}
+              </div>
             </div>
           </div>
         </div>

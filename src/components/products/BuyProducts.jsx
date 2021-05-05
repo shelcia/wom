@@ -16,7 +16,7 @@ const BuyProducts = () => {
   return (
     <React.Fragment>
       <section className="container py-5">
-        <div className="row">
+        <div className="row mt-5">
           <div className="col-sm-3">
             <h4 className="mb-4">Filters</h4>
             <div id="Categories">
@@ -62,7 +62,7 @@ const BuyProducts = () => {
                         alt={product.name}
                         style={{ width: "100%", objectFit: "contain" }}
                       />
-                      <div className="d-flex  justify-content-between align-items-end">
+                      <div className="d-flex justify-content-between align-items-end mt-3">
                         <div>
                           <h3 className="text-warning d-inline">
                             ₹{product.rate}
