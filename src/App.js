@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Loading from "./components/common/Loading";
+import { BlogProvider } from "./context/BlogContext";
 import { ProductProvider } from "./context/ProductContext";
 import AboutPage from "./pages/AboutPage";
 import BlogsPage from "./pages/BlogsPage";
@@ -23,16 +24,18 @@ const App = () => {
   ) : (
     <React.Fragment>
       <ProductProvider>
-        <BrowserRouter>
-          <Switch>
-            <Route component={LandingPage} exact path="/" />
-            <Route component={AboutPage} exact path="/about" />
-            <Route component={BlogsPage} exact path="/blogs" />
-            <Route component={ContactPage} exact path="/contact" />
-            <Route component={ProductsPage} exact path="/products" />
-            <Route component={ProductInfoPage} path="/products/:id" />
-          </Switch>
-        </BrowserRouter>
+        <BlogProvider>
+          <BrowserRouter>
+            <Switch>
+              <Route component={LandingPage} exact path="/" />
+              <Route component={AboutPage} exact path="/about" />
+              <Route component={BlogsPage} exact path="/blogs" />
+              <Route component={ContactPage} exact path="/contact" />
+              <Route component={ProductsPage} exact path="/products" />
+              <Route component={ProductInfoPage} path="/products/:id" />
+            </Switch>
+          </BrowserRouter>
+        </BlogProvider>
       </ProductProvider>
     </React.Fragment>
   );
