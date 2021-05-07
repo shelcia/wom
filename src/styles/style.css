@@ -188,13 +188,15 @@ body {
   padding-bottom: 0.5rem;
 }
 
+.contact input,
 .footer-bg input {
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 1.5px solid black;
   padding-left: 0px;
   border-radius: 0%;
 }
 
+.contact input:focus,
 .footer-bg input:focus {
   border: none;
   border-bottom: 2px solid black;
