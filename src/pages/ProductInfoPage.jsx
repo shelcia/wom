@@ -54,9 +54,9 @@ const ProductInfoPage = ({ match }) => {
               <img src={product.info_image} alt="" width="100%" />
             </div>
             <div className="col-md-6 pt-4 pl-3 d-flex justify-content-between flex-column mb-3">
-              <h1 className="font-weight-bold mt-4">{product.name}</h1>
+              <h1 className="fw-bold mt-4">{product.name}</h1>
               <div>
-                <h1 className="d-inline display-4 font-weight-bold text-warning">
+                <h1 className="d-inline display-4 fw-bold text-warning">
                   ₹{product.rate}
                 </h1>{" "}
                 <span
@@ -100,7 +100,7 @@ const ProductInfoPage = ({ match }) => {
                 </div>
               </div>
               <div>
-                <button className="btn btn-warning mr-4 mb-1">
+                <button className="btn btn-warning me-4 mb-1">
                   Add to Wishlist
                 </button>
                 <button className="btn btn-warning mb-1">Add to Cart</button>
@@ -110,7 +110,64 @@ const ProductInfoPage = ({ match }) => {
         </div>
         <div className="bg-lighter py-5 product-info">
           <div className="container">
-            <ul className="nav nav-pills nav-justified mb-5">
+            <ul
+              className="nav nav-pills nav-justified mb-5"
+              id="pills-tab"
+              role="tablist"
+            >
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link active"
+                  id="pills-home-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-home"
+                  aria-selected="true"
+                >
+                  Health Benefits
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link"
+                  id="pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-profile"
+                  aria-selected="false"
+                >
+                  Storage
+                </button>
+              </li>
+            </ul>
+            <div className="tab-content" id="pills-tabContent">
+              <div
+                className="tab-pane fade show active"
+                id="pills-home"
+                role="tabpanel"
+                aria-labelledby="pills-home-tab"
+              >
+                {product.benefits.map((product, index) => (
+                  <p key={index}>
+                    <img src={ListIcon} alt="" height="25px" />
+                    <span className="ms-2">{product}</span>
+                  </p>
+                ))}
+              </div>
+              <div
+                className="tab-pane fade"
+                id="pills-profile"
+                role="tabpanel"
+                aria-labelledby="pills-profile-tab"
+              >
+                {product.storage}
+              </div>
+            </div>
+            {/* <ul className="nav nav-pills nav-justified mb-5">
               <li className="nav-item">
                 <a
                   className="nav-link active"
@@ -127,18 +184,18 @@ const ProductInfoPage = ({ match }) => {
               </li>
             </ul>
             <div className="tab-content">
-              <div className="tab-pane container fade active" id="health">
+              <div className="tab-pane container active" id="health">
                 {product.benefits.map((product, index) => (
                   <p key={index}>
                     <img src={ListIcon} alt="" height="25px" />
-                    <span className="ml-2">{product}</span>
+                    <span className="ms-2">{product}</span>
                   </p>
                 ))}
               </div>
               <div className="tab-pane container fade" id="menu1">
                 {product.storage}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

@@ -35,7 +35,7 @@ const Products = () => {
                 </div>
               </div>
               <div className="text-center mt-3">
-                <h4 className="font-weight-bolder">{product.name}</h4>{" "}
+                <h4 className="fw-bold">{product.name}</h4>{" "}
                 <p className="text-muted">Starting with $35</p>
                 <button
                   className="btn btn-warning"

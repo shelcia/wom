@@ -8,7 +8,7 @@ const AboutPage = () => {
       <Topbar />
       <section className="container-fluid pt-5 px-0">
         <div className="container">
-          <h1 className="font-weight-bold">
+          <h1 className="fw-bold">
             About <span className="text-warning">WOM</span>{" "}
           </h1>
           <div className="row my-5">

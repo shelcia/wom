@@ -5,9 +5,7 @@ const Goals = () => {
   return (
     <React.Fragment>
       <section className="container py-5">
-        <h1 className="display-4 font-weight-bolder text-info mb-4">
-          Our Goal
-        </h1>
+        <h1 className="display-4 fw-bold text-info mb-4">Our Goal</h1>
         <div className="row my-4 pt-4">
           <div className="col-lg-5 mb-2">
             <iframe

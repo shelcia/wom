@@ -39,8 +39,8 @@ const Footer = () => {
                 <h4 className="mb-4">Follow us on</h4>
 
                 <div className="text-warning">
-                  <i className="fab fa-facebook-f mr-3 fa-lg"></i>
-                  <i className="fab fa-twitter mr-3 fa-lg"></i>
+                  <i className="fab fa-facebook-f me-3 fa-lg"></i>
+                  <i className="fab fa-twitter me-3 fa-lg"></i>
                   <i className="fab fa-youtube fa-lg" />
                 </div>
               </div>
@@ -60,7 +60,7 @@ const Footer = () => {
                   />
                 </div>
 
-                <div className="text-right mt-4">
+                <div className="text-end mt-4">
                   <button className="btn btn-warning">Subscribe</button>{" "}
                 </div>
               </div>

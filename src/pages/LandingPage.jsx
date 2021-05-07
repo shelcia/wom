@@ -21,7 +21,7 @@ const LandingPage = () => {
       <div className="w-100 text-center bg-lighter py-5">
         <h3 className="text-uppercase m-0">
           Back to top
-          <img src={ArrowUp} alt="" height="25px" className="ml-2 mb-1" />
+          <img src={ArrowUp} alt="" height="25px" className="ms-2 mb-1" />
         </h3>
       </div>
       <Footer />

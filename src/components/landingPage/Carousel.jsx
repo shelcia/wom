@@ -8,13 +8,31 @@ const Carousel = () => {
 
   return (
     <React.Fragment>
-      <header id="demo" className="carousel slide" data-ride="carousel">
-        <ul className="carousel-indicators">
-          <li data-target="#demo" data-slide-to="0" className="active"></li>
-          <li data-target="#demo" data-slide-to="1"></li>
-          <li data-target="#demo" data-slide-to="2"></li>
-        </ul>
-
+      <header id="carousel" className="carousel slide" data-bs-ride="carousel">
+        <div className="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide-to="0"
+            className="active circle"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+            className="circle"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+            className="circle"
+          ></button>
+        </div>
         <div className="carousel-inner">
           {image.map((img, index) => (
             <div
@@ -30,13 +48,30 @@ const Carousel = () => {
             </div>
           ))}
         </div>
-
-        <a className="carousel-control-prev" href="#demo" data-slide="prev">
-          <span className="carousel-control-prev-icon"></span>
-        </a>
-        <a className="carousel-control-next" href="#demo" data-slide="next">
-          <span className="carousel-control-next-icon"></span>
-        </a>
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carousel"
+          data-bs-slide="prev"
+        >
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carousel"
+          data-bs-slide="next"
+        >
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Next</span>
+        </button>
       </header>
     </React.Fragment>
   );

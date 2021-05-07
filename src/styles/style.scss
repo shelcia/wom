@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 @import "./components/checkbox";
+@import "./components/scrollbar";
 
-$primaryBg: #033e44;
 $primaryColor: #fed113;
 $secondBg: #ffffce;
 
@@ -31,6 +31,9 @@ body {
   .navbar-toggler {
     color: black;
     border: none;
+    &:focus {
+      box-shadow: none;
+    }
   }
 }
 
@@ -98,19 +101,7 @@ body {
   font-size: 1rem;
 }
 
-.badge-pills {
-  list-style: none;
-  padding-left: 0px;
-  display: flex;
-  li {
-    background-color: #0c726f79;
-    padding: 0.5rem 1rem;
-    margin-right: 0.5rem;
-    cursor: pointer;
-  }
-}
-
-.carousel-indicators li {
+#carousel button.circle {
   height: 10px;
   width: 10px;
   border: none;
@@ -178,6 +169,36 @@ body {
     color: black;
     font-size: 1.3rem;
     text-align: left;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.custom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+button.close {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
+.close {
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
   }
 }
 

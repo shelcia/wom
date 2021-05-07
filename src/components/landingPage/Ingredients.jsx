@@ -29,9 +29,7 @@ const Ingredients = () => {
     <React.Fragment>
       <section className="bg-lighter">
         <div className="container py-5 text-center">
-          <h1 className="font-weight-bold mb-5">
-            Honest Ingredients and Products
-          </h1>
+          <h1 className="fw-bold mb-5">Honest Ingredients and Products</h1>
           <div className="row mt-5">
             {content.map((content, index) => (
               <div className="col-sm-4 mb-5" key={index}>
