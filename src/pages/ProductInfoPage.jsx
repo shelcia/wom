@@ -127,7 +127,7 @@ const ProductInfoPage = ({ match }) => {
               </li>
             </ul>
             <div className="tab-content">
-              <div className="tab-pane container active fade" id="health">
+              <div className="tab-pane container fade active" id="health">
                 {product.benefits.map((product, index) => (
                   <p key={index}>
                     <img src={ListIcon} alt="" height="25px" />

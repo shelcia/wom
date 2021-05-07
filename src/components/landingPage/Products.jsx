@@ -22,9 +22,6 @@ const Products = () => {
   return (
     <React.Fragment>
       <section className="container pt-5">
-        {/* <h1 className="display-4 font-weight-bolder text-info mb-4">
-          Our Products
-        </h1> */}
         <div className="row mt-4">
           {products.map((product, index) => (
             <div className="col-sm-4 mb-5" key={index}>
