@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Oil1 from "../../assets/carousel/groundnut.png";
-import Oil2 from "../../assets/carousel/gingelly.png";
-import Oil3 from "../../assets/carousel/sesame.png";
+import Oil1 from "../../assets/carousel/groundnut.JPG";
+import Oil2 from "../../assets/carousel/gingelly.JPG";
+import Oil3 from "../../assets/carousel/sesame.JPG";
 
 const Carousel = () => {
   const [image] = useState([{ image: Oil1 }, { image: Oil2 }, { image: Oil3 }]);
