@@ -19,10 +19,12 @@ const LandingPage = () => {
       {/* <Goals /> */}
       <Blog />
       <div className="w-100 text-center bg-lighter py-5">
-        <h3 className="text-uppercase m-0">
-          Back to top
-          <img src={ArrowUp} alt="" height="25px" className="ms-2 mb-1" />
-        </h3>
+        <a href="#carousel" style={{ textDecoration: "none" }}>
+          <h3 className="text-uppercase m-0 text-dark">
+            Back to top
+            <img src={ArrowUp} alt="" height="25px" className="ms-2 mb-1" />
+          </h3>
+        </a>
       </div>
       <Footer />
     </React.Fragment>

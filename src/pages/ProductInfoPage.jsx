@@ -22,6 +22,8 @@ const ProductInfoPage = ({ match }) => {
     desc: "",
     benefits: [],
     storage: "",
+    product_img: "",
+    product_mixture: "",
   });
 
   useEffect(() => {
@@ -74,13 +76,22 @@ const ProductInfoPage = ({ match }) => {
                 Check if we could Deliver at your location
               </p>
               <div className="d-flex justify-content-around align-items-center">
-                <div className="form-group">
+                {/* <label for="standard-select">Standard Select</label> */}
+                <div className="select">
+                  <select id="standard-select">
+                    <option>500ml</option>
+                    <option>1 Litre</option>
+                    <option>5 Litres</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+                {/* <div className="form-group">
                   <select className="form-control" id="sel1">
                     <option>500ml</option>
                     <option>1 Litre</option>
                     <option>5 Litres</option>
                   </select>
-                </div>
+                </div> */}
                 <div className="d-flex align-items-center">
                   <button
                     type="button"
@@ -196,6 +207,48 @@ const ProductInfoPage = ({ match }) => {
                 {product.storage}
               </div>
             </div> */}
+          </div>
+        </div>
+        <div className="container mt-5">
+          <div className="row">
+            <div className="col-md-6">
+              <img src={product.product_img} alt="" className="img-fluid" />
+            </div>
+            <div className="col-md-6">
+              <h3 className="mb-2">How do we source our oil seeds ?</h3>
+              <p>
+                We use high quality groundnuts, sesame seeds and coconut for oil
+                production. We source our raw materials from the government
+                mandi where farmers directly keep their harvest for open
+                bidding. Our team along with the experts identify the high
+                quality raw material and bid for the best price. We transport
+                the purchased raw material to the manufacturing unit for further
+                quality check and cleaning. The cleaned raw material is checked
+                for humidity level to ensure the raw material is dried properly.
+                After all these processes, we pack the materials in jute bags
+                and send them to the cold pressing unit.
+              </p>
+            </div>
+          </div>
+          <div className="row mt-5">
+            <div className="col-md-6">
+              <h3 className="mb-2">Our manufacturing process</h3>
+              <p>
+                The quality oil seeeds are processed in our “Vagai mara Chekku"
+                machine. In this process, the raw material is crushed between
+                the “Ulakkai” (rice stamper) and “Ural” (Grinding stone) to
+                squeeze the oil from the seeds. The low rpm crushing process and
+                wooden contact surface generates zero heat which helps in
+                retaining the nutritional value of the oil. The extracted oil is
+                filtered using normal cloth to remove small particles
+                (unsqueezed groundnut). The filtered oil is then kept under
+                natural sunlight for natural sedimentation of fine particles
+                that escaped the filtering process.
+              </p>
+            </div>
+            <div className="col-md-6">
+              <img src={product.product_mixture} alt="" className="img-fluid" />
+            </div>
           </div>
         </div>
       </section>

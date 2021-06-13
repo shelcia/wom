@@ -1,5 +1,6 @@
 import React from "react";
-import Blog1 from "../../assets/blogs/Blog1.png";
+import { Link } from "react-router-dom";
+import Blog1 from "../../assets/products/shadow_pics/Gingelly.png";
 
 const Blog = () => {
   return (
@@ -40,7 +41,9 @@ const Blog = () => {
           </div>
         </div>
         <div className="text-center">
-          <button className="btn btn-warning">More Blogs</button>
+          <Link to="/blogs">
+            <button className="btn btn-warning">More Blogs</button>
+          </Link>
         </div>
       </section>
     </React.Fragment>

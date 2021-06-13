@@ -8,8 +8,7 @@ const ContactPage = () => {
   const [message, setMessage] = useState("");
 
   const API_KEY = process.env.REACT_APP_GMAPS_API_KEY;
-  const QUERY =
-    "Indian+Institute+of+Information+Technology,+Design+and+Manufacturing,+Kancheepuram";
+  const QUERY = "A-block,+RH+center+Neyveli,+Cuddalore+Dis";
 
   return (
     <React.Fragment>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Product1 from "../../assets/products/shadow_pics/GDB_shadow.png";
-import Product2 from "../../assets/products/shadow_pics/SSB_shadow.png";
-import Product3 from "../../assets/products/shadow_pics/CCB_shadow.png";
+import Product1 from "../../assets/products/shadow_pics/Groundnut.png";
+import Product2 from "../../assets/products/shadow_pics/Gingelly.png";
+import Product3 from "../../assets/products/shadow_pics/Coconut.png";
 
 const Products = () => {
   const [products] = useState([
@@ -14,7 +14,7 @@ const Products = () => {
       image: Product2,
     },
     {
-      name: "Sesame Oil",
+      name: "Coconut Oil",
       image: Product3,
     },
   ]);

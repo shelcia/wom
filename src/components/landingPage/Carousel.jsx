@@ -5,7 +5,6 @@ import Oil3 from "../../assets/carousel/sesame.JPG";
 
 const Carousel = () => {
   const [image] = useState([{ image: Oil1 }, { image: Oil2 }, { image: Oil3 }]);
-
   return (
     <React.Fragment>
       <header id="carousel" className="carousel slide" data-bs-ride="carousel">
