@@ -8,12 +8,12 @@ import SesameBigInfo from "../assets/products/product_info/Gingelly_Info.jpg";
 import GingellyBigInfo from "../assets/products/product_info/Sesame_Info.jpg";
 
 import GroundnutProduct from "../assets/products/product_pics/groundnut.png";
-import GingellyProduct from "../assets/products/product_pics/gingelly.png";
-import CoconutProduct from "../assets/products/product_pics/groundnut.png";
+// import GingellyProduct from "../assets/products/product_pics/gingelly.png";
+// import CoconutProduct from "../assets/products/product_pics/groundnut.png";
 
 import GroundnutMixture from "../assets/products/product_mixtures/groundnut.png";
-import GingellyMixture from "../assets/products/product_mixtures/gingelly.png";
-import CoconutMixture from "../assets/products/product_mixtures/groundnut.png";
+// import GingellyMixture from "../assets/products/product_mixtures/gingelly.png";
+// import CoconutMixture from "../assets/products/product_mixtures/groundnut.png";
 
 export const ProductContext = createContext();
 
